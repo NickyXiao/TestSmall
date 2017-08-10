@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TestSmall.iml" filepath="$PROJECT_DIR$/TestSmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.bank_repository/app.bank_repository.iml" filepath="$PROJECT_DIR$/app.bank_repository/app.bank_repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.main/app.main.iml" filepath="$PROJECT_DIR$/app.main/app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.p2p/app.p2p.iml" filepath="$PROJECT_DIR$/app.p2p/app.p2p.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.react_native/app.react_native.iml" filepath="$PROJECT_DIR$/app.react_native/app.react_native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib.analytics/lib.analytics.iml" filepath="$PROJECT_DIR$/lib.analytics/lib.analytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib.network/lib.network.iml" filepath="$PROJECT_DIR$/lib.network/lib.network.iml" />
+    </modules>
+  </component>
+</project>

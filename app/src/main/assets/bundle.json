@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "bundles": [
+    {
+      "uri": "main",
+      "pkg": "test_small.senble.china.com.appmain",
+      "type": "app"
+    },
+    {
+      "uri": "bank_repository",
+      "pkg": "test_small.senble.china.com.appbank_repository",
+      "type": "app"
+    },
+    {
+      "uri": "p2p",
+      "pkg": "test_small.senble.china.com.appp2p",
+      "type": "app"
+    },
+    {
+      "uri": "react_native",
+      "pkg": "test_small.senble.china.com.appreact_native",
+      "type": "app"
+    },
+    {
+      "uri": "lib.network",
+      "pkg": "test_small.senble.china.com.libnetwork",
+      "type": "lib"
+    },
+    {
+      "uri": "lib.analytics",
+      "pkg": "test_small.senble.china.com.libanalytics",
+      "type": "lib"
+    }
+  ]
+}
