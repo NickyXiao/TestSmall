@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app+stub" />
             <option value="$PROJECT_DIR$/app.bank_repository" />
             <option value="$PROJECT_DIR$/app.main" />
             <option value="$PROJECT_DIR$/app.p2p" />
