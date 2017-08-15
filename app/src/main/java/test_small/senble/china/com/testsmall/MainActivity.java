@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
         Small.setUp(this, new Small.OnCompleteListener() {
             @Override
             public void onComplete() {
-
+                Small.openUri("main",MainActivity.this);
+                finish();
             }
         });
     }
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void textClick(View view) {
-        Small.openUri("main",MainActivity.this);
-    }
+//    public void textClick(View view) {
+//        Small.openUri("main",MainActivity.this);
+//    }
 }

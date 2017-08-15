@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/app.react_native" />
             <option value="$PROJECT_DIR$/lib.analytics" />
             <option value="$PROJECT_DIR$/lib.network" />
+            <option value="$PROJECT_DIR$/lib.style" />
+            <option value="$PROJECT_DIR$/lib.utils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -30,6 +30,16 @@
       "uri": "lib.analytics",
       "pkg": "test_small.senble.china.com.libanalytics",
       "type": "lib"
+    },
+    {
+      "uri": "lib.style",
+      "pkg": "test_small.senble.china.com.lib.style",
+      "type": "lib"
+    },
+    {
+      "uri": "lib.utils",
+      "pkg": "test_small.senble.china.com.lib.utils",
+      "type": "lib"
     }
   ]
 }
