@@ -4,10 +4,10 @@ import android.app.Application;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
-import com.sz.p2p.pjb.module.network.request.manager.OkRequestManagerRetriever;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import test_small.senble.china.com.libnetwork.request.manager.OkRequestManagerRetriever;
 
 /**
  * Created by Administrator on 2017/4/17.

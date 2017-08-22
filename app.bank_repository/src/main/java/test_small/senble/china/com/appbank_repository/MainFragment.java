@@ -17,4 +17,6 @@ public class MainFragment extends test_small.senble.china.com.appstub.base.BaseF
     protected View getInitialedView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, null);
     }
+
+
 }

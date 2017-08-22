@@ -1,7 +1,5 @@
 package test_small.senble.china.com.libnetwork.request.ssl;
 
-import com.sz.p2p.pjb.module.network.BuildConfig;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.GeneralSecurityException;
@@ -22,6 +20,7 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 import okio.Buffer;
+import test_small.senble.china.com.libnetwork.BuildConfig;
 
 /**
  * Created by Administrator on 2017/6/9.
@@ -37,7 +36,7 @@ public class SslHelper {
             public boolean verify(String hostname, SSLSession session) {
                 //服务器证书的校验
                 HostnameVerifier hostnameVerifier1 = HttpsURLConnection.getDefaultHostnameVerifier();
-                if("debug".equals(BuildConfig.BUILD_TYPE)){
+                if(BuildConfig.DEBUG){
                     return true;
                 }else{
                     return hostnameVerifier1.verify("www.pj.com",session) || hostnameVerifier1.verify("pj.com",session);

@@ -1,0 +1,5 @@
+com.google.dagger:dagger:2.11
+javax.inject:javax.inject:1
+org.reactivestreams:reactive-streams:1.0.0
+com.google.code.findbugs:jsr305:3.0.1
+io.reactivex.rxjava2:rxjava:2.1.2

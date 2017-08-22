@@ -17,6 +17,6 @@ public final class OkHttpChildGlideModule implements GlideModule {
 
   @Override
   public void registerComponents(Context context, Glide glide) {
-      glide.register(GlideUrl.class, InputStream.class, new com.sz.p2p.pjb.module.network.image_request.OkHttpUrlLoader.Factory());
+      glide.register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory());
   }
 }

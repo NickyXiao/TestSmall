@@ -5,10 +5,10 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.sz.p2p.pjb.module.network.events.ForceLogoutEvent;
-
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONObject;
+
+import test_small.senble.china.com.libnetwork.events.ForceLogoutEvent;
 
 /**
  * Created by Administrator on 2017/4/17.

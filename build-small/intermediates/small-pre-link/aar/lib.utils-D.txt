@@ -1,0 +1,13 @@
+com.android.support:support-v4:25.3.1
+com.android.support:support-compat:25.3.1
+com.android.support:animated-vector-drawable:25.3.1
+com.android.support:support-media-compat:25.3.1
+com.android.support:support-core-ui:25.3.1
+TestSmall:app+stub:unspecified
+com.android.support:support-fragment:25.3.1
+io.reactivex.rxjava2:rxandroid:2.0.1
+com.android.support:support-vector-drawable:25.3.1
+com.android.support:support-core-utils:25.3.1
+com.google.dagger:dagger-android-support:2.11
+com.google.dagger:dagger-android:2.11
+com.android.support:appcompat-v7:25.3.1

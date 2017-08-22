@@ -1,9 +1,8 @@
 package test_small.senble.china.com.libnetwork.request;
 
 
-import com.sz.p2p.pjb.module.network.request.ssl.SslHelper;
-
 import okhttp3.OkHttpClient;
+import test_small.senble.china.com.libnetwork.request.ssl.SslHelper;
 
 /**
  * Created by Administrator on 2017/4/10.

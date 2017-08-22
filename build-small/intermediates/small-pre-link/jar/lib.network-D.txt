@@ -1,0 +1,4 @@
+com.squareup.okio:okio:1.11.0
+org.greenrobot:eventbus:3.0.0
+com.squareup.okhttp3:okhttp:3.6.0
+com.github.bumptech.glide:glide:3.7.0

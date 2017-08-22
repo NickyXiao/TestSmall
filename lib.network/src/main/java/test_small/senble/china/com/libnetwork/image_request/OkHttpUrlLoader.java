@@ -7,11 +7,11 @@ import com.bumptech.glide.load.model.GenericLoaderFactory;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.ModelLoader;
 import com.bumptech.glide.load.model.ModelLoaderFactory;
-import com.sz.p2p.pjb.module.network.request.OkHttpRequestClient;
 
 import java.io.InputStream;
 
 import okhttp3.Call;
+import test_small.senble.china.com.libnetwork.request.OkHttpRequestClient;
 
 /**
  * A simple model loader for fetching media over http/https using OkHttp.

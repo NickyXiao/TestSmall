@@ -1432,3 +1432,6 @@ int[] styleable ViewStubCompat
 int styleable ViewStubCompat_android_id
 int styleable ViewStubCompat_android_inflatedId
 int styleable ViewStubCompat_android_layout
+int mipmap br_bg_top_add_e_account
+int mipmap calculator_pic_03
+int mipmap calculator_pic_04
