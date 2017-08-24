@@ -5,4 +5,5 @@ package test_small.senble.china.com.appstub.base;
  */
 
 public interface BasePresenter<T> {
+
 }

@@ -13,6 +13,6 @@ public interface MainPageContractor {
     }
 
     interface Presenter extends BasePresenter<View> {
-
+        void loadData();
     }
 }
