@@ -1,5 +1,14 @@
-com.google.dagger:dagger:2.11
-javax.inject:javax.inject:1
+com.squareup.retrofit2:retrofit:2.3.0
 org.reactivestreams:reactive-streams:1.0.0
+org.greenrobot:eventbus:3.0.0
+com.squareup.okhttp3:okhttp:3.8.0
+com.google.code.gson:gson:2.7
+com.trello.rxlifecycle2:rxlifecycle:2.1.0
+com.google.dagger:dagger:2.11
+com.squareup.retrofit2:adapter-rxjava2:2.3.0
+javax.inject:javax.inject:1
+com.squareup.okio:okio:1.13.0
 com.google.code.findbugs:jsr305:3.0.1
+com.github.bumptech.glide:glide:3.7.0
+com.squareup.retrofit2:converter-gson:2.3.0
 io.reactivex.rxjava2:rxjava:2.1.2

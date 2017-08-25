@@ -17,35 +17,16 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Administrator on 2017/8/24.
  */
 public class UserCaseHandler {
-    private IUserCase mUserCase;
-
-    public UserCaseHandler(IUserCase userCase){
-        mUserCase = userCase;
-    }
-
-    public <O> void executeUserTask(final IUserCase<O> userCase){
-//        mUserCase.run();
-//        userCase.getCallBack().success(userCase.get);
-//        Observable.create(new ObservableOnSubscribe<ResponseValue>() {
-//            @Override
-//            public void subscribe(@NonNull ObservableEmitter<ResponseValue> e) throws Exception {
-//                //执行用户操作请求
-//            }
-//        }).subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .compose(this.<Long>bindUntilEvent(ActivityEvent.DESTROY))
-//                .subscribe(new Consumer<ResponseValue>() {
-//                    @Override
-//                    public void accept(ResponseValue responseValue) throws Exception {
-//                        //回调
-//                        userCase.getCallBack().success(responseValue);
-//                    }
-//                });
-
-        userCase.getObservable().subscribe(new Consumer<O>() {
+    public <T> void executeUserTask(final IUserCase<T> userCase){
+        userCase.getObservable().subscribe(new Consumer<T>() {
             @Override
-            public void accept(O o) throws Exception {
-                userCase.getCallBack().success(o);
+            public void accept(T t) throws Exception {
+                userCase.getCallBack().success(t);
+            }
+        }, new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                userCase.getCallBack().failed(new ErrorValue() {});
             }
         });
     }
@@ -62,8 +43,8 @@ public class UserCaseHandler {
 
     }
 
-    public interface CallBack<O>{
-        void success(O responseValue);
+    public interface CallBack<T>{
+        void success(T responseValue);
         void failed(ErrorValue errorValue);
     }
 }

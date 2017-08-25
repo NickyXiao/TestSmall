@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import test_small.senble.china.com.appbank_repository.main.MainPageContractor;
+import test_small.senble.china.com.appbank_repository.main.MainPagePresenterImpl;
 import test_small.senble.china.com.appstub.base.BaseView;
 
 /**
@@ -17,9 +18,19 @@ import test_small.senble.china.com.appstub.base.BaseView;
 
 public class MainFragment extends test_small.senble.china.com.appstub.base.BaseFragment implements MainPageContractor.View {
 
+    MainPageContractor.Presenter mPresenter;
+
     @Override
     protected View getInitialedView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mPresenter = new MainPagePresenterImpl(this, this);
         return inflater.inflate(R.layout.fragment_main, null);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        mPresenter.loadData();
     }
 
     @Override
