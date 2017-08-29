@@ -1,6 +1,7 @@
 package test_small.senble.china.com.appbank_repository.main;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.trello.rxlifecycle2.android.ActivityEvent;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
@@ -8,6 +9,7 @@ import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -20,7 +22,11 @@ import io.reactivex.schedulers.Schedulers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import test_small.senble.china.com.appstub.AbsTask;
 import test_small.senble.china.com.appstub.IUserCase;
 import test_small.senble.china.com.appstub.RxView;
@@ -44,13 +50,13 @@ public class GetMainPageDataTask extends AbsTask<GetMainPageDataTask.RequestValu
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
-        Retrofit.Builder builder1 = new Retrofit.Builder().client(builder.build());
-        Retrofit retrofit = builder1.baseUrl("https://www.pj.com").build();
-
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), new JSONObject(mRequestValue.getValues()).toString());
-        return retrofit.create(IMainPageInfoAPI.class).getMainPageInfo(requestBody);
+//        try {
+//            return retrofit.create(IMainPageInfoAPI.class).getMainPageInfo(requestBody).execute().body();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        return null;
     }
 
     @Override
