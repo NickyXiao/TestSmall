@@ -31,17 +31,11 @@ public class UserCaseHandler {
         });
     }
 
-    public interface RequestValue{
+    public interface RequestValue{}
 
-    }
+    public interface ResponseValue{}
 
-    public interface ResponseValue{
-
-    }
-
-    public interface ErrorValue{
-
-    }
+    public interface ErrorValue{}
 
     public interface CallBack<T>{
         void success(T responseValue);

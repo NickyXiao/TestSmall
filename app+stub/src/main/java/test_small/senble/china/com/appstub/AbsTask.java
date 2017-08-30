@@ -4,6 +4,7 @@ import com.trello.rxlifecycle2.android.ActivityEvent;
 import com.trello.rxlifecycle2.android.FragmentEvent;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -33,7 +34,8 @@ public abstract class AbsTask<I, T, B extends RxView> implements IUserCase<T>  {
             @Override
             public void subscribe(@NonNull ObservableEmitter<T> e) throws Exception {
 //                e.onNext(run());
-                run();
+                T responseValue = run();
+                e.onNext(responseValue);
             }
         }).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

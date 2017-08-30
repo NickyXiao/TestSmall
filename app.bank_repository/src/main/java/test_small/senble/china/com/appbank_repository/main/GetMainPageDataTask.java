@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -27,6 +28,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+import test_small.senble.china.com.appbank_repository.beans.Result;
 import test_small.senble.china.com.appstub.AbsTask;
 import test_small.senble.china.com.appstub.IUserCase;
 import test_small.senble.china.com.appstub.RxView;
@@ -45,17 +48,22 @@ public class GetMainPageDataTask extends AbsTask<GetMainPageDataTask.RequestValu
     @Override
     public ResponseValue run() {
         //模拟执行网络请求首页数据
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
-//        try {
-//            return retrofit.create(IMainPageInfoAPI.class).getMainPageInfo(requestBody).execute().body();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        Retrofit.Builder builder1 = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).client(builder.build());
+        Retrofit retrofit = builder1.baseUrl("https://www.pj.com/rest/").build();
+
+        Map<String, String> requestMap = new HashMap<>();
+        requestMap.put("referral","应用宝");
+        requestMap.put("clientId","3");
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), new JSONObject(requestMap).toString());
+
+        try {
+            return retrofit.create(IMainPageInfoAPI.class).getMainPageInfo(requestBody).execute().body();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e("TestRetrofit","失败----------------------");
+        }
         return null;
     }
 
@@ -76,6 +84,12 @@ public class GetMainPageDataTask extends AbsTask<GetMainPageDataTask.RequestValu
     }
 
     public class ResponseValue implements UserCaseHandler.ResponseValue{
-
+        private Result result;
+        public void setResult(Result result) {
+            this.result = result;
+        }
+        public Result getResult() {
+            return result;
+        }
     }
 }

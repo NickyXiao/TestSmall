@@ -12,5 +12,5 @@ import test_small.senble.china.com.appbank_repository.beans.MainPageDataInfo;
 
 public interface IMainPageInfoAPI {
     @POST("frontPage/v1.7/getBannerIndex")
-    Call<MainPageDataInfo> getMainPageInfo(@Body RequestBody requestBody);
+    Call<GetMainPageDataTask.ResponseValue> getMainPageInfo(@Body RequestBody requestBody);
 }

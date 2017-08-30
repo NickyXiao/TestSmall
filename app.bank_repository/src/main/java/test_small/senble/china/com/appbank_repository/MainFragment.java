@@ -49,30 +49,6 @@ public class MainFragment extends test_small.senble.china.com.appstub.base.BaseF
         super.onResume();
 
         mPresenter.loadData();
-
-
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-
-        Retrofit.Builder builder1 = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).client(builder.build());
-        Retrofit retrofit = builder1.baseUrl("https://www.pj.com/rest/").build();
-
-        Map<String, String> requestMap = new HashMap<>();
-        requestMap.put("referral","应用宝");
-        requestMap.put("clientId","3");
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), new JSONObject(requestMap).toString());
-
-
-        retrofit.create(IMainPageInfoAPI.class).getMainPageInfo(requestBody).enqueue(new Callback<MainPageDataInfo>() {
-            @Override
-            public void onResponse(Call<MainPageDataInfo> call, Response<MainPageDataInfo> response) {
-                Log.e("TestRetrofit","成功----------------------"+response.body().getResult().getTopTitle());
-            }
-
-            @Override
-            public void onFailure(Call<MainPageDataInfo> call, Throwable throwable) {
-                Log.e("TestRetrofit","失败----------------------"+throwable.getMessage());
-            }
-        });
     }
 
     @Override
