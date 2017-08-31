@@ -9,32 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.RequestBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-import test_small.senble.china.com.appbank_repository.beans.MainPageDataInfo;
-import test_small.senble.china.com.appbank_repository.main.GetMainPageDataTask;
-import test_small.senble.china.com.appbank_repository.main.IMainPageInfoAPI;
 import test_small.senble.china.com.appbank_repository.main.MainPageContractor;
 import test_small.senble.china.com.appbank_repository.main.MainPagePresenterImpl;
-import test_small.senble.china.com.appstub.base.BaseView;
+import test_small.senble.china.com.lib.common.base.BaseFragment;
 
 /**
  * Created by Administrator on 2017/8/8.
  */
 
-public class MainFragment extends test_small.senble.china.com.appstub.base.BaseFragment implements MainPageContractor.View {
+public class MainFragment extends BaseFragment implements MainPageContractor.View {
 
     MainPageContractor.Presenter mPresenter;
 

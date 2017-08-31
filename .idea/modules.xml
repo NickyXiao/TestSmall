@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/app.p2p/app.p2p.iml" filepath="$PROJECT_DIR$/app.p2p/app.p2p.iml" />
       <module fileurl="file://$PROJECT_DIR$/app.react_native/app.react_native.iml" filepath="$PROJECT_DIR$/app.react_native/app.react_native.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.analytics/lib.analytics.iml" filepath="$PROJECT_DIR$/lib.analytics/lib.analytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib.common/lib.common.iml" filepath="$PROJECT_DIR$/lib.common/lib.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.network/lib.network.iml" filepath="$PROJECT_DIR$/lib.network/lib.network.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.style/lib.style.iml" filepath="$PROJECT_DIR$/lib.style/lib.style.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.utils/lib.utils.iml" filepath="$PROJECT_DIR$/lib.utils/lib.utils.iml" />

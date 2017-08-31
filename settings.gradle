@@ -1,1 +1,1 @@
-include ':app', ':app.main', ':app.bank_repository', ':app.p2p', ':lib.network', ':lib.analytics', ':app.react_native', ':app+stub', ':lib.style', ':lib.utils'
+include ':app', ':app.main', ':app.bank_repository', ':app.p2p', ':lib.network', ':lib.analytics', ':app.react_native', ':app+stub', ':lib.style', ':lib.utils', ':lib.common'

@@ -45,4 +45,5 @@ dependencies {
 
     compile project(':lib.style')
     compile project(':lib.utils')
+    compile project(':lib.common')
 }

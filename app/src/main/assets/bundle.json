@@ -37,6 +37,11 @@
       "type": "lib"
     },
     {
+      "uri": "lib.common",
+      "pkg": "test_small.senble.china.com.lib.common",
+      "type": "lib"
+    },
+    {
       "uri": "lib.utils",
       "pkg": "test_small.senble.china.com.lib.utils",
       "type": "lib"

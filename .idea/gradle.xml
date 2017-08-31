@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/app.p2p" />
             <option value="$PROJECT_DIR$/app.react_native" />
             <option value="$PROJECT_DIR$/lib.analytics" />
+            <option value="$PROJECT_DIR$/lib.common" />
             <option value="$PROJECT_DIR$/lib.network" />
             <option value="$PROJECT_DIR$/lib.style" />
             <option value="$PROJECT_DIR$/lib.utils" />
