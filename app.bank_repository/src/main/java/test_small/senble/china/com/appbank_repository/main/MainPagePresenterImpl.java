@@ -1,5 +1,7 @@
 package test_small.senble.china.com.appbank_repository.main;
 
+import com.trello.rxlifecycle2.android.FragmentEvent;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,10 +17,10 @@ import test_small.senble.china.com.lib.common.UserCaseHandler;
 public class MainPagePresenterImpl implements MainPageContractor.Presenter {
 
     private MainPageContractor.View view;
-    private RxView rxView;
-    UserCaseHandler userCaseHandler;
+    private RxView<FragmentEvent> rxView;
+    private UserCaseHandler userCaseHandler;
 
-    public MainPagePresenterImpl(RxView rxView, MainPageContractor.View view) {
+    public MainPagePresenterImpl(RxView<FragmentEvent> rxView, MainPageContractor.View view) {
         this.view = view;
         this.rxView = rxView;
         userCaseHandler = new UserCaseHandler();
@@ -48,9 +50,5 @@ public class MainPagePresenterImpl implements MainPageContractor.Presenter {
                 },
                 rxView);
         userCaseHandler.executeUserTask(getMainPageDataTask);
-
-
-
-
     }
 }

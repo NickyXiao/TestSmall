@@ -1,5 +1,9 @@
 package test_small.senble.china.com.lib.common;
 
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -13,8 +17,8 @@ public class UserCaseHandler {
      * @param <I>
      * @param <R>
      */
-    public <I, R> void executeUserTask(final IUserCase<I , R> userCase){
-        userCase.getObservable().subscribe(new Consumer<R>() {
+    public <I, R, V extends RxView> void executeUserTask(final IUserCase<I, R, V> userCase){
+        userCase.generateObservable(userCase.getRequestValue()).subscribe(new Consumer<R>() {
             @Override
             public void accept(R t) throws Exception {
                 userCase.getCallBack().success(t);
@@ -26,6 +30,4 @@ public class UserCaseHandler {
             }
         });
     }
-
-
 }
