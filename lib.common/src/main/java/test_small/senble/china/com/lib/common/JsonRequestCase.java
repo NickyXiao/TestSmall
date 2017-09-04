@@ -1,6 +1,6 @@
 package test_small.senble.china.com.lib.common;
 
-import com.trello.rxlifecycle2.android.FragmentEvent;
+import com.trello.rxlifecycle2.LifecycleProvider;
 
 import org.json.JSONObject;
 
@@ -19,20 +19,20 @@ import okhttp3.RequestBody;
  * Created by Administrator on 2017/9/1.
  */
 
-public abstract class JsonRequestCase<R> implements IUserCase<JsonRequestCase.RequestValue, R, RxView> {
+public abstract class JsonRequestCase<R> implements IUserCase<JsonRequestCase.RequestValue, R> {
 
     private RequestValue mRequestValue;
-    private RxView<FragmentEvent> mRxView;
+    private LifecycleProvider<?> mLifecycleProvider;
     private CallBack<R> mCallBack;
 
-    public JsonRequestCase(RequestValue requestValue, CallBack<R> callBack, RxView<FragmentEvent> rxView){
-        mRxView = rxView;
+    public JsonRequestCase(RequestValue requestValue, CallBack<R> callBack, LifecycleProvider<?> lifecycleProvider){
         mRequestValue = requestValue;
         mCallBack = callBack;
+        mLifecycleProvider = lifecycleProvider;
     }
 
     @Override
-    public Observable<R> generateObservable(final RequestValue requestValues) {
+    public final Observable<R> generateObservable(final RequestValue requestValues) {
         return Observable.create(new ObservableOnSubscribe<R>() {
             @Override
             public void subscribe(@NonNull ObservableEmitter<R> e) throws Exception {
@@ -41,16 +41,11 @@ public abstract class JsonRequestCase<R> implements IUserCase<JsonRequestCase.Re
             }
         }).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .compose(mRxView.<R>bindToLifecycle());}
+                .compose(mLifecycleProvider.<R>bindToLifecycle());}
 
     @Override
     public CallBack<R> getCallBack() {
         return mCallBack;
-    }
-
-    @Override
-    public RxView getBindedRxView() {
-        return mRxView;
     }
 
     @Override

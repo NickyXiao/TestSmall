@@ -2,25 +2,23 @@ package test_small.senble.china.com.appbank_repository.main;
 
 import android.util.Log;
 
-import com.trello.rxlifecycle2.android.FragmentEvent;
+import com.trello.rxlifecycle2.LifecycleProvider;
 
 import java.io.IOException;
 
-import io.reactivex.Observable;
 import test_small.senble.china.com.appbank_repository.api.Api;
 import test_small.senble.china.com.appbank_repository.beans.Result;
 import test_small.senble.china.com.lib.common.JsonRequestCase;
-import test_small.senble.china.com.lib.common.RxView;
 import test_small.senble.china.com.lib.common.http.RetrofitInstance;
 
 /**
  * Created by Administrator on 2017/8/24.
  */
 
-public class GetMainPageDataTask extends JsonRequestCase<GetMainPageDataTask.ResponseValue>{
+public class GetMainPageDataTask extends JsonRequestCase<GetMainPageDataTask.ResponseValue> {
 
-    public GetMainPageDataTask(RequestValue requestValue, CallBack<ResponseValue> callBack, RxView<FragmentEvent> rxView) {
-        super(requestValue, callBack, rxView);
+    public GetMainPageDataTask(RequestValue requestValue, CallBack<ResponseValue> callBack, LifecycleProvider<?> lifecycleProvider) {
+        super(requestValue, callBack, lifecycleProvider);
     }
 
     @Override

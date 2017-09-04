@@ -17,7 +17,7 @@ public class UserCaseHandler {
      * @param <I>
      * @param <R>
      */
-    public <I, R, V extends RxView> void executeUserTask(final IUserCase<I, R, V> userCase){
+    public <I, R> void executeUserTask(final IUserCase<I, R> userCase){
         userCase.generateObservable(userCase.getRequestValue()).subscribe(new Consumer<R>() {
             @Override
             public void accept(R t) throws Exception {

@@ -11,14 +11,16 @@ import test_small.senble.china.com.lib.common.data.source.IDataPolicy;
  *
  */
 
-public interface IUserCase<I, R, V extends RxView>{
+public interface IUserCase<I, R>{
     /**
-     * 执行的一般是耗时操作
+     *     执行的一般是耗时操作<br>
+     *     如：网络请求，数据库操作
      */
     R runAsync(I requestValues);
 
     /**
-     * 通过请求数据，生成对应的被监听着对象
+     *     通过请求数据，生成对应的被监听着对象<br>
+     *
      * @return
      */
     Observable<R> generateObservable(I requestValues);
@@ -32,5 +34,5 @@ public interface IUserCase<I, R, V extends RxView>{
 
     I getRequestValue();
     CallBack<R> getCallBack();
-    V getBindedRxView();
+//    V getBindedRxView();
 }
