@@ -12,7 +12,7 @@ import com.trello.rxlifecycle2.components.RxFragment;
  * Created by Administrator on 2017/8/10.
  */
 
-public abstract class BaseFragment extends RxFragment{
+public abstract class BaseFragment extends com.trello.rxlifecycle2.components.support.RxFragment{
 
     @Nullable
     @Override
